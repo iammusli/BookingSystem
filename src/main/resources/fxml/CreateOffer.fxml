@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OfferController">
+   <children>
+      <ImageView fitHeight="508.0" fitWidth="741.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/create_res_bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slika" fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="161.0" layoutX="58.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Button fx:id="dodajSliku" layoutX="96.0" layoutY="205.0" mnemonicParsing="false" onAction="#dodajSlikuOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: #bfd1df; -fx-border-color: black; -fx-border-width: 2px 2px 2px 2px;" text="Dodaj Sliku">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="wifi" layoutX="48.0" layoutY="295.0" mnemonicParsing="false" onAction="#wifiOnAction" text="WiFi" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="48.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="klima" layoutX="188.0" layoutY="435.0" mnemonicParsing="false" onAction="#klimaOnAction" text="Klima" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="181.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bazen" layoutX="55.0" layoutY="385.0" mnemonicParsing="false" onAction="#bazenOnAction" text="Bazen" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="48.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="parking" layoutX="181.0" layoutY="295.0" mnemonicParsing="false" onAction="#parkingOnAction" text="Parking" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="181.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv" layoutX="188.0" layoutY="385.0" mnemonicParsing="false" onAction="#tvOnAction" text="TV" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="181.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kupaonica" layoutX="55.0" layoutY="435.0" mnemonicParsing="false" onAction="#kupaonicaOnAction" text="Kupaonica" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="48.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balkon" layoutX="184.0" layoutY="340.0" mnemonicParsing="false" onAction="#balkonOnAction" text="Balkon" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="181.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kuhinja" layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#kuhinjaOnAction" text="Kuhinja" textFill="#45bbff" translateY="-25.0" AnchorPane.leftAnchor="48.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="opis" alignment="TOP_LEFT" layoutX="349.0" layoutY="355.0" prefHeight="60.0" prefWidth="362.0" promptText="Kratak opis" style="-fx-background-color: white; -fx-border-color: #45bbff; -fx-border-width: 2px 2px 2px 2px;" />
+      <Text fill="#45bbff" layoutX="349.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naziv smještaja:" translateY="-15.0" wrappingWidth="219.9830722808838">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <TextField fx:id="naziv" layoutX="349.0" layoutY="65.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white;" translateY="-15.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Text fill="#45bbff" layoutX="569.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijena:" translateY="-15.0" wrappingWidth="228.9830722808838">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cijena" layoutX="569.0" layoutY="67.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" translateY="-15.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="255.0" layoutX="349.0" layoutY="105.0" stroke="#45bbff" strokeType="INSIDE" translateY="-15.0" width="362.0" />
+      <ImageView fitHeight="25.0" fitWidth="59.0" layoutX="365.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" translateY="45.0" AnchorPane.leftAnchor="365.0">
+         <image>
+            <Image url="@../pics/bed.png" />
+         </image>
+      </ImageView>
+      <Text fill="#45bbff" layoutX="409.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Broj Kreveta:" translateY="30.0" wrappingWidth="115.0" AnchorPane.leftAnchor="409.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <TextField fx:id="brojKreveta" layoutX="521.0" layoutY="195.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: white; -fx-border-color: #45bbff;" translateY="45.0" AnchorPane.leftAnchor="521.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="25.0" fitWidth="59.0" layoutX="365.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" translateY="45.0" AnchorPane.leftAnchor="365.0">
+         <image>
+            <Image url="@../pics/porvsina.png" />
+         </image>
+      </ImageView>
+      <Text fill="#45bbff" layoutX="409.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Površina:" translateY="45.0" wrappingWidth="115.0" AnchorPane.leftAnchor="409.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <TextField fx:id="povrsina" layoutX="521.0" layoutY="229.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: white; -fx-border-color: #45bbff;" translateY="45.0" AnchorPane.leftAnchor="521.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="25.0" fitWidth="59.0" layoutX="365.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" translateY="-15.0" AnchorPane.leftAnchor="365.0">
+         <image>
+            <Image url="@../pics/location.png" />
+         </image>
+      </ImageView>
+      <Text fill="#45bbff" layoutX="409.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lokacija:" translateY="-15.0" wrappingWidth="115.0" AnchorPane.leftAnchor="409.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <TextField fx:id="drzava" layoutX="521.0" layoutY="135.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" promptText="Država" style="-fx-background-color: white; -fx-border-color: #45bbff;" AnchorPane.leftAnchor="521.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="25.0" fitWidth="59.0" layoutX="365.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" translateY="-15.0" AnchorPane.leftAnchor="365.0">
+         <image>
+            <Image url="@../pics/type.png" />
+         </image>
+      </ImageView>
+      <Text fill="#45bbff" layoutX="409.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tip:" translateY="-15.0" wrappingWidth="115.0" AnchorPane.leftAnchor="409.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <ComboBox fx:id="tip" editable="true" layoutX="521.0" layoutY="115.0" onAction="#tipOnAction" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #45bbff;" translateY="-15.0" AnchorPane.leftAnchor="521.0" />
+      <Button fx:id="potvrdi" layoutX="349.0" layoutY="425.0" mnemonicParsing="false" onAction="#potvrdiOnAction" prefHeight="11.0" prefWidth="362.0" style="-fx-background-color: #bfd1df; -fx-border-color: black; -fx-border-width: 2px 2px 2px 2px;" text="Potvrdi" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancel" layoutX="340.0" layoutY="465.0" mnemonicParsing="false" onAction="#cancelOnAction" prefHeight="34.0" prefWidth="362.0" style="-fx-background-color: #bfd1df; -fx-border-color: black; -fx-border-width: 2px 2px 2px 2px;" text="Otkaži" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="grad" layoutX="521.0" layoutY="170.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" promptText="Grad" style="-fx-background-color: white; -fx-border-color: #45bbff;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <TextField fx:id="adresa" layoutX="521.0" layoutY="205.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" promptText="Adresa" style="-fx-background-color: white; -fx-border-color: #45bbff;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <CheckBox fx:id="placanjePoRezervaciji" layoutX="78.0" layoutY="460.0" mnemonicParsing="false" onAction="#placanjePoRezervacijiOnAction" text="Placanje Po Rezervaciji" textFill="#45bbff">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="kapacitet" layoutX="521.0" layoutY="310.0" maxHeight="27.0" maxWidth="175.0" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: white; -fx-border-color: #45bbff;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="25.0" fitWidth="59.0" layoutX="365.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/user_add.png" />
+         </image>
+      </ImageView>
+      <Text fill="#45bbff" layoutX="409.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kapacitet:" wrappingWidth="115.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

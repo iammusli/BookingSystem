@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeListingController">
+   <children>
+      <ImageView fitHeight="466.0" fitWidth="926.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/Home_Listing.png" />
+         </image>
+      </ImageView>
+      <Line endX="-100.0" endY="634.6288452148438" layoutX="496.0" layoutY="-190.0" startX="-100.0" startY="213.0" stroke="WHITE" strokeWidth="3.0" />
+      <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#e9eeee96" height="125.0" layoutX="407.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" width="508.0" />
+      <ComboBox fx:id="lokacija" layoutX="13.0" layoutY="22.0" onAction="#lokacijaOnAction" prefHeight="40.0" prefWidth="365.0" promptText="Lokacija" />
+      <Button fx:id="search" layoutX="33.0" layoutY="384.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="52.0" prefWidth="346.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 2px 2px 2px 2px; -fx-background-radius: 50; -fx-border-radius: 50;" text="Ažuriraj Pretragu" textFill="WHITE">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pics/search2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="14.0" layoutY="98.0" text="Cijena" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="maxCijena" layoutX="227.0" layoutY="97.0" prefHeight="33.0" prefWidth="136.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="76.0" layoutY="72.0" text="Od:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="72.0" text="Do:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="98.0" text="€" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="minCijena" layoutX="76.0" layoutY="97.0" prefHeight="33.0" prefWidth="136.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="13.0" layoutY="168.0" text="Površina" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="142.0" text="Od:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="243.0" layoutY="141.0" text="Do:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="358.0" layoutY="168.0" text="m2" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="minPovrsina" layoutX="98.0" layoutY="164.0" prefHeight="33.0" prefWidth="108.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="maxPovrsina" layoutX="243.0" layoutY="163.0" prefHeight="33.0" prefWidth="108.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </TextField>
+      <CheckBox fx:id="wifi" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#wifiOnAction" text="WiFi" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="klima" layoutX="315.0" layoutY="216.0" mnemonicParsing="false" onAction="#klimaOnAction" text="Klima" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bazen" layoutX="221.0" layoutY="216.0" mnemonicParsing="false" onAction="#bazenOnAction" text="Bazen" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="parking" layoutX="109.0" layoutY="216.0" mnemonicParsing="false" onAction="#parkingOnAction" text="Parking" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv" layoutX="292.0" layoutY="258.0" mnemonicParsing="false" onAction="#tvOnAction" text="TV" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kupaonica" layoutX="155.0" layoutY="296.0" mnemonicParsing="false" onAction="#kupaonicaOnAction" text="Kupaonica" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balkon" layoutX="186.0" layoutY="258.0" mnemonicParsing="false" onAction="#balkonOnAction" text="Balkon" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kuhinja" layoutX="76.0" layoutY="258.0" mnemonicParsing="false" onAction="#kuhinjaOnAction" text="Kuhinja" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="brojKreveta" layoutX="152.0" layoutY="336.0" onAction="#brojKrevetaOnAction" prefHeight="25.0" prefWidth="208.0" />
+      <Label layoutX="19.0" layoutY="336.0" text="Broj Kreveta:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="slika1" fitHeight="113.0" fitWidth="208.0" layoutX="420.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/vacation.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="naziv1" layoutX="614.0" layoutY="28.0" prefHeight="17.0" prefWidth="47.0" text="Naziv" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="tip1" layoutX="614.0" layoutY="76.0" prefHeight="17.0" prefWidth="47.0" text="Tip" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="opis1" layoutX="614.0" layoutY="124.0" prefHeight="17.0" prefWidth="47.0" text="Opis" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="722.0" layoutY="124.0" prefHeight="17.0" prefWidth="47.0" text="Cijena" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="cijena1" layoutX="769.0" layoutY="124.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="816.0" layoutY="124.0" prefHeight="17.0" prefWidth="47.0" text="Povšina" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="povrsina1" layoutX="863.0" layoutY="124.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="wifi1" layoutX="720.0" layoutY="28.0" mnemonicParsing="false" onAction="#wifi1OnAction" text="WiFi" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="parking1" layoutX="816.0" layoutY="28.0" mnemonicParsing="false" onAction="#parking1OnAction" text="Parking" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bazen1" layoutX="720.0" layoutY="54.0" mnemonicParsing="false" onAction="#bazen1OnAction" text="Bazen" textFill="WHITE" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="klima1" layoutX="816.0" layoutY="54.0" mnemonicParsing="false" onAction="#klima1OnAction" text="Klima" textFill="WHITE" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kuhinja1" layoutX="722.0" layoutY="73.0" mnemonicParsing="false" onAction="#kuhinja1OnAction" text="Kuhinja" textFill="WHITE" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balkon1" layoutX="816.0" layoutY="68.0" mnemonicParsing="false" onAction="#balkon1OnAction" text="Balkon" textFill="WHITE" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv1" layoutX="722.0" layoutY="90.0" mnemonicParsing="false" onAction="#tv1OnAction" text="TV" textFill="WHITE" AnchorPane.topAnchor="96.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kupaonica1" layoutX="816.0" layoutY="90.0" mnemonicParsing="false" onAction="#kupaonica1OnAction" text="Kupaonica" textFill="WHITE" AnchorPane.topAnchor="96.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <Rectangle fx:id="rectangle11" arcHeight="5.0" arcWidth="5.0" fill="#e9eeee96" height="125.0" layoutX="407.0" layoutY="169.0" stroke="WHITE" strokeType="INSIDE" width="508.0" />
+      <ImageView fx:id="slika2" fitHeight="113.0" fitWidth="208.0" layoutX="420.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/vacation.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="naziv2" layoutX="614.0" layoutY="175.0" prefHeight="17.0" prefWidth="47.0" text="Naziv" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="tip2" layoutX="614.0" layoutY="223.0" prefHeight="17.0" prefWidth="47.0" text="Tip" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="opis2" layoutX="614.0" layoutY="271.0" prefHeight="17.0" prefWidth="47.0" text="Opis" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="722.0" layoutY="271.0" prefHeight="17.0" prefWidth="47.0" text="Cijena" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="cijena2" layoutX="769.0" layoutY="271.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="816.0" layoutY="271.0" prefHeight="17.0" prefWidth="47.0" text="Povšina" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="povrsina2" layoutX="863.0" layoutY="271.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="wifi2" layoutX="720.0" layoutY="175.0" mnemonicParsing="false" onAction="#wifi2OnAction" text="WiFi" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="parking2" layoutX="816.0" layoutY="175.0" mnemonicParsing="false" onAction="#parking2OnAction" text="Parking" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bazen2" layoutX="720.0" layoutY="197.0" mnemonicParsing="false" onAction="#bazen2OnAction" text="Bazen" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="klima2" layoutX="816.0" layoutY="197.0" mnemonicParsing="false" onAction="#klima2OnAction" text="Klima" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kuhinja2" layoutX="722.0" layoutY="220.0" mnemonicParsing="false" onAction="#kuhinja2OnAction" text="Kuhinja" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balkon2" layoutX="816.0" layoutY="220.0" mnemonicParsing="false" onAction="#balkon2OnAction" text="Balkon" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv2" layoutX="722.0" layoutY="243.0" mnemonicParsing="false" onAction="#tv2OnAction" text="TV" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kupaonica2" layoutX="816.0" layoutY="243.0" mnemonicParsing="false" onAction="#kupaonica2OnAction" text="Kupaonica" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <Rectangle fx:id="rectangle111" arcHeight="5.0" arcWidth="5.0" fill="#e9eeee96" height="125.0" layoutX="407.0" layoutY="321.0" stroke="WHITE" strokeType="INSIDE" width="508.0" />
+      <ImageView fx:id="slika3" fitHeight="113.0" fitWidth="208.0" layoutX="420.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/vacation.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="naziv3" layoutX="614.0" layoutY="327.0" prefHeight="17.0" prefWidth="47.0" text="Naziv" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="tip3" layoutX="614.0" layoutY="375.0" prefHeight="17.0" prefWidth="47.0" text="Tip" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="opis3" layoutX="614.0" layoutY="423.0" prefHeight="17.0" prefWidth="47.0" text="Opis" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="722.0" layoutY="423.0" prefHeight="17.0" prefWidth="47.0" text="Cijena" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="cijena3" layoutX="769.0" layoutY="423.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="816.0" layoutY="423.0" prefHeight="17.0" prefWidth="47.0" text="Povšina" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="povrsina3" layoutX="863.0" layoutY="423.0" prefHeight="17.0" prefWidth="47.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="wifi3" layoutX="720.0" layoutY="327.0" mnemonicParsing="false" onAction="#wifi3OnAction" text="WiFi" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="parking3" layoutX="816.0" layoutY="327.0" mnemonicParsing="false" onAction="#parking3OnAction" text="Parking" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bazen3" layoutX="720.0" layoutY="349.0" mnemonicParsing="false" onAction="#bazen3OnAction" text="Bazen" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="klima3" layoutX="816.0" layoutY="349.0" mnemonicParsing="false" onAction="#klima3OnAction" text="Klima" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kuhinja3" layoutX="722.0" layoutY="372.0" mnemonicParsing="false" onAction="#kuhinja3OnAction" text="Kuhinja" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balkon3" layoutX="816.0" layoutY="372.0" mnemonicParsing="false" onAction="#balkon3OnAction" text="Balkon" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv3" layoutX="722.0" layoutY="395.0" mnemonicParsing="false" onAction="#tv1OnAction" text="TV" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="kupaonica3" layoutX="816.0" layoutY="395.0" mnemonicParsing="false" onAction="#kupaonica3OnAction" text="Kupaonica" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

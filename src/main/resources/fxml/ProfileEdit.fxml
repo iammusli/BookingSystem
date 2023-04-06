@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProfileEditController">
+   <children>
+      <ImageView fitHeight="374.0" fitWidth="681.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/UsersBackground.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="30.0" layoutY="35.0" prefHeight="20.0" prefWidth="90.0" text="Ime" textFill="#00a6ff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="75.0" prefHeight="20.0" prefWidth="90.0" text="Prezime" textFill="#00a6ff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="115.0" prefHeight="20.0" prefWidth="90.0" text="Država" textFill="#00a6ff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="155.0" prefHeight="17.0" prefWidth="90.0" text="Grad" textFill="#00aaff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="195.0" prefHeight="17.0" prefWidth="90.0" text="Broj telefona" textFill="#00a6ff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="brojKarticeLabel" layoutX="30.0" layoutY="235.0" prefHeight="17.0" prefWidth="90.0" text="Broj kartice" textFill="#00a6ff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveChangesButton" layoutX="165.0" layoutY="292.0" mnemonicParsing="false" onAction="#saveChangesButtonOnAction" prefHeight="37.0" prefWidth="135.0" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 25; -fx-background-radius: 25;" text="Snimi promjene" textFill="#45bbff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="imeUser" layoutX="130.0" layoutY="35.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="prezimeUser" layoutX="130.0" layoutY="75.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="drzavaUser" layoutX="130.0" layoutY="115.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="gradUser" layoutX="130.0" layoutY="155.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="brojTelUser" layoutX="130.0" layoutY="195.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="brojKarticeUser" layoutX="130.0" layoutY="235.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="359.0" layoutY="35.0" prefHeight="20.0" prefWidth="90.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="115.0" prefHeight="20.0" prefWidth="90.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="155.0" prefHeight="40.0" prefWidth="90.0" text="Confirm Password" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="75.0" prefHeight="20.0" prefWidth="90.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailUser" layoutX="445.0" layoutY="35.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="usernameUser" layoutX="445.0" layoutY="75.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordUser" layoutX="445.0" layoutY="115.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="confirmPasswordUser" layoutX="445.0" layoutY="155.0" prefHeight="20.0" prefWidth="217.0" promptText="Prazno ostaje nepromijenjeno">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="discardChangesButton" layoutX="385.0" layoutY="292.0" mnemonicParsing="false" onAction="#discardChangesButtonOnAction" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 25; -fx-background-radius: 25;" text="Odustani" textFill="#45bbff">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageUser" layoutX="410.0" layoutY="204.0" prefHeight="60.0" prefWidth="250.0" textFill="#b21414" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
